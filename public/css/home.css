@@ -1,0 +1,95 @@
+body{
+background: red;
+background: url('/image/avtar.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+.side{
+    width:500px;
+    height: 500px;
+    color: black;
+    overflow: hidden;
+}
+
+.ram{
+    margin-top:10px;
+    display: block;
+    width: 40px;
+    height:40px;
+    background: red;
+    margin-left:270px;
+}
+a{
+    font-size:40px;
+}
+
+button{
+
+    height: 40px;
+    width: 90px;
+    border: 1px solid black;
+    position:absolute;
+    margin-left: 558px;  
+    color: white;
+    display:inline-block;
+    border: none; 
+    cursor: pointer;
+    margin: 5px;
+     
+
+}
+
+#b{
+    font-size:40px;
+}
+
+#h1{
+    margin-left:590px;
+    color:#caccce;
+    
+}
+
+#bottombtn{
+
+    color:red;
+    width:100px;
+    height:100px;
+    overflow: hidden;
+    margin: 150 0 0  1150;
+    position: fixed;
+    border-radius: 100%;
+    z-index:4;
+}
+
+#wrapper{
+
+    margin: 100 0 0 550;
+    overflow: hidden;
+    width: 700px;  
+    height:700px;
+    
+    /*display: none;*/
+    
+}
+
+.btn1{
+    
+    width: 600px;
+    height: 50px;
+    margin: 0 0 10 0; 
+    
+}
+
+li{
+    margin-left:10px;
+}
+
+
+#box{
+    margin:-180 0 0 0;
+    height:500px;
+    color:white;
+    background:red;
+    width:10px;
+}

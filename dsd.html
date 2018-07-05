@@ -1,0 +1,47 @@
+
+ $("#in").keyup(function(){
+    
+    var a= $("#in").val();
+    
+    $.ajax({   
+
+        headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+            
+        type:"post",
+        url: "input",
+        data: "a="+a,
+        success: function(data){
+
+           console.log(data.msg[0].title);
+            result="";
+            var div1='<div id="show" style="overflow:auto;width:990px;oveflow:auto;height:400px;display:inline-block">' 
+            
+           for (i in data["msg"]){
+
+
+res+= '<div class="cook" style="display:inline-block;width:400px;height:400px;overflow:auto ;margin:0 2 5 20;border:2px solid red">'
++'<div class="w3-container" >'
++'<div style="width:400px;">'
++'<h1 style="display:inline-block;width:250px; " class="w3-text-teal "><b><span>'+data.msg[i].title+'</span> </b></h1><br>'
++'</div>'
++'</div><h3 class="w3-opacity" style="display:inline-block; width:70px">  <b> <strong> TASK: </strong>  </b></h3>'
++'<h2 class="w3-text-teal" style="display:inline-block; margin-left:100 px;width:300px">'+data.msg[i].task+'</h2> <br><br>'
++'<hr></div>'
+
+}
+
+var div2='</div>'
+
+var result = div1+res+div2;
+
+           $("#show").html(res);
+
+            
+        }
+    });
+                    
+ });
+
+            
